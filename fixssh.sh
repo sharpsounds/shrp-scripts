@@ -16,4 +16,4 @@ sudo echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-sett
 
 printf "\n Rebooting! \n"
 sleep 2
-sudo reboot now
+#sudo reboot now
