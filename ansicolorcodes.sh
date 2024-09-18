@@ -28,4 +28,4 @@ bg_br_blue='\e[104m'
 bg_br_magenta='\e[105m'
 bg_br_cyan='\e[106m'
 
-code='\e[30;100m'
+codeblock='\e[30;100m'
