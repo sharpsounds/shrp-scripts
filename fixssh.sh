@@ -1,5 +1,4 @@
 #!/bin/bash
-set -v
 #colorcodes
 noformat='\e[0;40m'
 red='\e[31;40m'
@@ -20,25 +19,31 @@ if [ `id -u` != '0' ]; then
 else
     printf "$br_green RESULT:$green You are ROOT. $noformat\n"
 fi
-
+set -v
 cd /
-
+set +v
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config $noformat"
 sleep 0.5
+set -v
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
+set +v
 printf "$br_green ...done!\n"
 
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config $noformat"
 sleep 0.5
+set -v
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+set +v
 printf "$br_green ...done! $noformat\n"
 
 printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes  $noformat"
 sleep 0.5
+set -v
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
-printf "$br_green ...done! $noformat\n"
 set +v
+printf "$br_green ...done! $noformat\n"
+
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
 sleep 1
 printf " ....4\n"
