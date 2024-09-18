@@ -11,7 +11,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev\null
 
 printf "\n Updating system! \n"
-sudo nala update -y
+sudo nala update
 sudo nala upgrade -y
 
 printf "\n Installing packages: \n - qemu-guest-agent \n - nfs-commonncdu \n - btop \n - docker-ce \n - docker-ce-cli \n - containerd.io \n - docker-buildx-plugin \n - docker-compose-plugin \n"
