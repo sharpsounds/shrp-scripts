@@ -20,9 +20,10 @@ clear
 
 printf "\n$b_yellow INFO:$yellow Checking if script is runnning as ROOT \n"
 if [ `id -u` != '0' ]; then
-    printf "$b_red RESULT:$red Root privileges are required for this script."
+    printf "$b_red RESULT:$red Root privileges are required for this script.\n"
+    exit
 else
-    printf "$b_green RESULT:$green You are root."
+    printf "$b_green RESULT:$green You are root.\n"
 fi
 
 cd /
