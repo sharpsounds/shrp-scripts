@@ -34,32 +34,32 @@ bg_br_cyan='\e[106m'
 codeblock='\e[30;100m'
 
 clear
-printf "\n$magenta Installing Nala because I like it! \n"
+printf "\n$magenta Installing Nala because I like it!$noformat \n"
 sleep 1
 apt install -y nala
 
-printf "\n$magenta Configuring prerequisites for Docker! \n"
+printf "\n$magenta Configuring prerequisites for Docker!$noformat \n"
 sleep 1
 mkdir -m 0755 -p /etc/apt/keyrings
 sleep 1
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev\null
 
-printf "\n$magenta Updating system! \n"
+printf "\n$magenta Updating system!$noformat \n"
 sleep 1
 nala update
 nala upgrade -y
 
-printf "\n$magenta Installing some packages like!"
+printf "\n$magenta Installing some packages like!$noformat \n"
 sleep 1
 nala install -y qemu-guest-agent ncdu btop docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-printf "\n$magenta Installing lazydocker! \n"
+printf "\n$magenta Installing$codeblock lazydocker!$noformat \n"
 sleep 1
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 mv ~/.local/bin/lazydocker /bin/lazydocker
 
-printf "\n$magenta Installing extra kernel modules! \n"
+printf "\n$magenta Installing extra kernel modules!$noformat \n"
 sleep 1
 curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
