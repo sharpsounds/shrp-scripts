@@ -1,6 +1,7 @@
 #!/bin/bash
-set -x
+set -v
 #colorcodes
+noformat='\e[0;40m'
 red='\e[31;40m'
 green='\e[32;40m'
 yellow='\e[33;40m'
@@ -12,32 +13,32 @@ codeblock='\e[30;100m'
 
 clear
 
-printf "\n$br_yellow INFO:$yellow Checking if script is runnning as ROOT \n"
+printf "\n$br_yellow INFO:$yellow Checking if script is runnning as ROOT $noformat\n"
 if [ `id -u` != '0' ]; then
     printf "$br_red RESULT:$red ROOT privileges not found. ROOT privileges are required for this script.\n"
     exit
 else
-    printf "$br_green RESULT:$green You are ROOT.\n"
+    printf "$br_green RESULT:$green You are ROOT. $noformat\n"
 fi
 
 cd /
 
-printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config"
+printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config $noformat"
 sleep 0.5
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
 printf "$br_green ...done!\n"
 
-printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config"
+printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config $noformat"
 sleep 0.5
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-printf "$br_green ...done!\n"
+printf "$br_green ...done! $noformat\n"
 
-printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes "
+printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes  $noformat"
 sleep 0.5
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
-printf "$br_green ...done!\n"
-
+printf "$br_green ...done! $noformat\n"
+set +v
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
 sleep 1
 printf " ....4\n"
