@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #colorcodes
-red='\e[31m'
-green='\e[32m'
-yellow='\e[33m'
-br_red='\e[91m'
-br_green='\e[92m'
-br_yellow='\e[93m'
+red='\e[31;40m'
+green='\e[32;40m'
+yellow='\e[33;40m'
+br_red='\e[91;40m'
+br_green='\e[92;40m'
+br_yellow='\e[93;40m'
 codeblock='\e[30;100m'
 
 # This is so the ZigBee USB kernel drivers will be available to the system to be used in the zigbee2mqtt container.
