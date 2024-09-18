@@ -11,7 +11,6 @@ codeblock='\e[30;100m'
 
 clear
 printf "\n$magenta Installing Nala because I like it!$noformat \n"
-printf "\n$br_magenta > apt install -y nala$noformat \n"
 apt install -y nala
 
 printf "\n$magenta Configuring prerequisites for Docker!$noformat \n"
@@ -20,11 +19,8 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 printf "\n$magenta Updating system!$noformat \n"
-printf "\n$br_magenta > nala update$noformat \n"
 nala update
-printf "\n$br_magenta > nala upgrade$noformat \n"
 nala upgrade -y
-printf "\n$br_magenta > nala full-upgrade$noformat \n"
 nala full-upgrade -y
 
 printf "\n$magenta Installing some packages like!$noformat \n"
@@ -38,11 +34,8 @@ printf "\n$magenta Installing extra kernel modules!$noformat \n"
 curl --silent --show-error https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
 printf "\n$magenta Cleaning up!$noformat \n"
-printf "\n$br_magenta > nala clean$noformat \n"
 nala clean
-printf "\n$br_magenta > nala autoremove$noformat \n"
 nala autoremove
-printf "\n$br_magenta > nala autopurge$noformat \n"
 nala autopurge
 
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
