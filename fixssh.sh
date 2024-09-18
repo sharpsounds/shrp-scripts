@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /
 clear
 printf "\n Appending PasswordAuthentication yes to /etc/ssh/ssh_config! \n"
 sleep 2
