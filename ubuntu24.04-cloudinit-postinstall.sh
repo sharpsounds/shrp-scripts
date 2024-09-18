@@ -49,6 +49,7 @@ printf "\n$magenta Updating system!$noformat \n"
 sleep 1
 nala update
 nala upgrade -y
+nala full-upgrade -y
 
 printf "\n$magenta Installing some packages like!$noformat \n"
 sleep 1
@@ -62,6 +63,11 @@ mv ~/.local/bin/lazydocker /bin/lazydocker
 printf "\n$magenta Installing extra kernel modules!$noformat \n"
 sleep 1
 curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
+
+printf "\n$magenta Cleaning up!$noformat \n"\
+nala clean
+nala autoremove
+nala autopurge
 
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
 sleep 1
