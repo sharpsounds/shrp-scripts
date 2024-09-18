@@ -7,8 +7,7 @@ printf $green "\n INFO: Checking if script is runnning as ROOT \n"
 if [ `id -u` != '0' ]; then
     printf $red "Root privileges are required for this script."
 else
-    echo $green "You are root."
-    exit
+    printf $green "You are root."
 fi
 
 cd /
