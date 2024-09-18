@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 #colorcodes
 red='\e[31;40m'
 green='\e[32;40m'
@@ -23,18 +23,17 @@ fi
 cd /
 
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config"
-sleep 1
+sleep 0.5
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
 printf "$br_green ...done!\n"
 
-
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config"
-sleep 1
+sleep 0.5
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 printf "$br_green ...done!\n"
 
 printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes "
-sleep 1
+sleep 0.5
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 printf "$br_green ...done!\n"
