@@ -1,5 +1,21 @@
 #!/bin/bash
 
+#colorcodes
+noformat='\e[0m'
+red='\e[31m'
+green='\e[32m'
+yellow='\e[33m'
+blue='\e[34m'
+magenta='\e[35m'
+cyan='\e[36m'
+grey='\e[90m'
+b_red='\e[91m'
+b_green='\e[92m'
+b_yellow='\e[93m'
+b_blue='\e[94m'
+b_magenta='\e[95m'
+b_cyan='\e[96m'
+
 clear
 printf "\n Installing Nala because I like it! \n"
 sleep 2

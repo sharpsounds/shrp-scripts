@@ -1,4 +1,6 @@
 #!/bin/bash
+
+#colorcodes
 noformat='\e[0m'
 red='\e[31m'
 green='\e[32m'
@@ -24,6 +26,7 @@ else
 fi
 
 cd /
+
 printf "\n$b_yellow INFO:$yellow Appending PasswordAuthentication yes to /etc/ssh/ssh_config!"
 sleep 2
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
