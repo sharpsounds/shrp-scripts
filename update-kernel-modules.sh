@@ -24,7 +24,7 @@ printf "\n$br_yellow INFO:$yellow Now installing linux-modules-extra based on th
 kernver="$(uname -r)"
 printf "\n$yellow Current kernel version is $codeblock $kernver $noformat\n"
 sleep 0.5
-set -v
+set -x
 nala install -y linux-modules-extra-$kernver
-set +v
+set +x
 printf "\n$br_green Module install/upgrade is complete.\n$red You should now reboot! \n"
