@@ -14,30 +14,33 @@ b_blue='\e[94m'
 b_magenta='\e[95m'
 b_cyan='\e[96m'
 
-
 clear
 
-printf "\n $b_yellow INFO: $_yellow Checking if script is runnning as ROOT \n"
+printf "\n$b_yellow INFO:$yellow Checking if script is runnning as ROOT \n"
 if [ `id -u` != '0' ]; then
-    printf $b_red "Root privileges are required for this script."
+    printf "$b_red RESULT:$red Root privileges are required for this script."
 else
-    printf $b_green "You are root."
+    printf "$b_green RESULT:$green You are root."
 fi
 
 cd /
-printf "\n $b_green INFO: $green Appending PasswordAuthentication yes to /etc/ssh/ssh_config! \n"
+printf "\n$b_yellow INFO:$yellow Appending PasswordAuthentication yes to /etc/ssh/ssh_config!"
 sleep 2
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
+printf "\n$b_green ...done!\n"
 
-printf "\n $b_green INFO: $green Appending PasswordAuthentication yes to /etc/ssh/sshd_config! \n"
+
+printf "\n$b_yellow INFO:$yellow Appending PasswordAuthentication yes to /etc/ssh/sshd_config!"
 sleep 2
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+printf "\n$b_green ...done!\n"
 
-printf "\n $b_green INFO: $green Replacing /etc/ssh/sshd_config.d/60-cloudimg-settings.conf with one that contains PasswordAuthentication yes! \n"
+printf "\n$b_yellow INFO:$yellow Replacing /etc/ssh/sshd_config.d/60-cloudimg-settings.conf with one that contains PasswordAuthentication yes!"
 sleep 2
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
+printf "\n$b_green ...done!\n"
 
-printf "\n $b_red INFO: $red Rebooting now! \n"
+printf "\n$b_red WARNING:$red Rebooting now! \n"
 sleep 2
 # reboot now
