@@ -17,5 +17,6 @@ sudo curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scri
 sudo mv ~/.local/bin/lazydocker /bin/lazydocker
 
 # kernel modules script goes here
+sudo curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
 sudo reboot now
