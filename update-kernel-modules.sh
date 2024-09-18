@@ -24,5 +24,5 @@ sleep 2
 kernver="$(uname -r)"
 printf "\n$yellow Current kernel version is$codeblock $kernver \n"
 sleep 2
-nala install linux-modules-extra-$kernver
+nala install -y linux-modules-extra-$kernver
 printf "\n$br_green Module install/upgrade is complete.$br_red You should now reboot! \n"
