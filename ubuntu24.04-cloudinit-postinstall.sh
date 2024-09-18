@@ -10,7 +10,9 @@ codeblock='\e[30;100m'
 
 clear
 printf "\n$magenta Installing Nala because I like it!$noformat \n"
+set -x
 apt install -y nala
+set +x
 
 printf "\n$magenta Configuring prerequisites for Docker!$noformat \n"
 set -x
