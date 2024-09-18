@@ -22,21 +22,21 @@ fi
 set -v
 cd /
 set +v
-printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config $noformat"
+printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config $noformat\n"
 sleep 0.5
 set -v
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
 set +v
 printf "$br_green ...done!\n"
 
-printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config $noformat"
+printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config $noformat\n"
 sleep 0.5
 set -v
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 set +v
 printf "$br_green ...done! $noformat\n"
 
-printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes  $noformat"
+printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes $noformat\n"
 sleep 0.5
 set -v
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
