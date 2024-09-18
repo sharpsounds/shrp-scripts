@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 #colorcodes
 noformat='\e[0;40m'
