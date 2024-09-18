@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #colorcodes
+noformat='\e[0;40m'
 red='\e[31;40m'
 green='\e[32;40m'
 yellow='\e[33;40m'
@@ -19,7 +20,7 @@ else
     printf "$br_green RESULT:$green You are ROOT.\n"
 fi
 
-printf "\n$br_yellow INFO:$yellow Now installing linux-modules-extra based on the output of $codeblock uname -r \n"
+printf "\n$br_yellow INFO:$yellow Now installing linux-modules-extra based on the output of $codeblock uname -r$noformat \n"
 kernver="$(uname -r)"
 printf "\n$yellow Current kernel version is $codeblock $kernver \n"
 sleep 1
