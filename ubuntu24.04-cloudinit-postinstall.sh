@@ -54,11 +54,11 @@ printf "\n$magenta Installing some packages like!$noformat \n"
 nala install -y qemu-guest-agent ncdu btop docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 printf "\n$magenta Installing$codeblock lazydocker!$noformat \n"
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+curl -sS https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 mv ~/.local/bin/lazydocker /bin/lazydocker
 
 printf "\n$magenta Installing extra kernel modules!$noformat \n"
-curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
+curl -sS https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
 printf "\n$magenta Cleaning up!$noformat \n"
 nala clean
