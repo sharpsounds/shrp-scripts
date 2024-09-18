@@ -54,4 +54,4 @@ printf " ..2\n"
 sleep 1
 printf " .1\n"
 sleep 1
-# reboot now
+reboot now
