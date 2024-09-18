@@ -64,7 +64,7 @@ printf "\n$magenta Installing extra kernel modules!$noformat \n"
 sleep 1
 curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
-printf "\n$magenta Cleaning up!$noformat \n"\
+printf "\n$magenta Cleaning up!$noformat \n"
 nala clean
 nala autoremove
 nala autopurge
