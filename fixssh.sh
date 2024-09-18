@@ -33,7 +33,7 @@ sleep 1
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 printf "$br_green ...done!\n"
 
-printf "\n$br_yellow INFO:$yellow Replacing $br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf with one that contains $codeblock PasswordAuthentication yes"
+printf "\n$br_yellow INFO:$yellow Replacing $br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes"
 sleep 1
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
@@ -41,14 +41,14 @@ printf "$br_green ...done!\n"
 
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
 sleep 1
-printf "5"
+printf ".....5\n"
 sleep 1
-printf "4"
+printf "....4\n"
 sleep 1
-printf "3"
+printf "...3\n"
 sleep 1
-printf "2"
+printf "..2\n"
 sleep 1
-printf "1"
+printf ".1\n"
 sleep 1
 # reboot now
