@@ -41,8 +41,6 @@ printf "$br_green ...done!\n"
 
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
 sleep 1
-printf " .....5\n"
-sleep 1
 printf " ....4\n"
 sleep 1
 printf " ...3\n"
@@ -51,4 +49,4 @@ printf " ..2\n"
 sleep 1
 printf " .1\n"
 sleep 1
-# reboot now
+reboot now
