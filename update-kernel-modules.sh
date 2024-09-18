@@ -20,9 +20,9 @@ else
     printf "$br_green RESULT:$green You are ROOT.\n"
 fi
 
-printf "\n$br_yellow INFO:$yellow Now installing linux-modules-extra based on the output of $codeblock uname -r$noformat \n"
+printf "\n$br_yellow INFO:$yellow Now installing linux-modules-extra based on the output of $codeblock uname -r $noformat\n"
 kernver="$(uname -r)"
-printf "\n$yellow Current kernel version is $codeblock $kernver \n"
+printf "\n$yellow Current kernel version is $codeblock $kernver $noformat\n"
 sleep 1
 nala install -y linux-modules-extra-$kernver
 printf "\n$br_green Module install/upgrade is complete.$br_red You should now reboot! \n"
