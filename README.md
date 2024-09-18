@@ -1,7 +1,9 @@
 First run 
-```curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/fixssh.sh | sudo bash```
-to fix ssh keys being the only way in
-
+```
+curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/fixssh.sh | sudo bash
+```
+to fix ssh keys being the only way in.
+reboot
 then SSH in and run
 ```
 curl https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/ubuntu24.04-cloudinit-postinstall.sh | sudo bash
