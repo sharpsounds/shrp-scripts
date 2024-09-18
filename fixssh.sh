@@ -19,29 +19,29 @@ if [ `id -u` != '0' ]; then
 else
     printf "$br_green RESULT:$green You are ROOT. $noformat\n"
 fi
-set -v
+set -x
 cd /
-set +v
+set +x
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/ssh_config $noformat\n"
 sleep 0.5
-set -v
+set -x
 echo "PasswordAuthentication yes" >> /etc/ssh/ssh_config
-set +v
+set +x
 printf "$br_green ...done!\n"
 
 printf "\n$br_yellow INFO:$yellow Appending $codeblock PasswordAuthentication yes $yellow to$br_blue /etc/ssh/sshd_config $noformat\n"
 sleep 0.5
-set -v
+set -x
 echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-set +v
+set +x
 printf "$br_green ...done! $noformat\n"
 
 printf "\n$br_yellow INFO:$yellow Replacing$br_blue /etc/ssh/sshd_config.d/60-cloudimg-settings.conf$yellow with one that contains $codeblock PasswordAuthentication yes $noformat\n"
 sleep 0.5
-set -v
+set -x
 rm /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
 echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
-set +v
+set +x
 printf "$br_green ...done! $noformat\n"
 
 printf "\n$br_red WARNING:$red Rebooting in 5 seconds!\n"
