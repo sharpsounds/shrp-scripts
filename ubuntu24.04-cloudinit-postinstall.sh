@@ -30,7 +30,7 @@ set +x
 
 printf "\n$magenta Installing some packages like!$noformat \n"
 set -x
-nala install -y qemu-guest-agent ncdu btop docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+nala install -y ncdu btop lnav qemu-guest-agent docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 set +x
 
 printf "\n$magenta Installing $codeblock lazydocker! $noformat\n"
