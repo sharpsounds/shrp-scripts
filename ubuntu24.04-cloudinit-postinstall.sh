@@ -8,6 +8,16 @@ br_red='\e[91;40m'
 br_magenta='\e[95;40m'
 codeblock='\e[30;100m'
 
+timedatectl
+
+clear
+printf "\n$magenta Setting Timezone$noformat \n"
+set -x
+sudo timedatectl set-timezone America/New_York
+set +x
+
+timedatectl
+
 clear
 printf "\n$magenta Installing Nala because I like it!$noformat \n"
 set -x
