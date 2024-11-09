@@ -13,7 +13,7 @@ timedatectl
 clear
 printf "\n$magenta Setting Timezone$noformat \n"
 set -x
-sudo timedatectl set-timezone America/New_York
+sudo timedatectl set-timezone Australia/Brisbane
 set +x
 
 timedatectl
