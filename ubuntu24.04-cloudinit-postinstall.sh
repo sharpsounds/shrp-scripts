@@ -52,6 +52,12 @@ set +x
 printf "\n$magenta Installing extra kernel modules!$noformat \n"
 curl --silent --show-error https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
+printf "\n$magenta Setting Docker download concurrency to 20 $noformat\n"
+set -x
+echo $'{\n    "max-concurrent-uploads": 3,\n    "max-concurrent-downloads": 20\n}' >> /etc/docker/daemon.json
+sudo service docker restart
+set +x
+
 printf "\n$magenta Cleaning up!$noformat \n"
 set -x
 nala clean
