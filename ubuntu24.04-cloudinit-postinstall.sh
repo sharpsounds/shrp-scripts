@@ -49,6 +49,12 @@ curl --silent --show-error https://raw.githubusercontent.com/jesseduffield/lazyd
 mv ~/.local/bin/lazydocker /bin/lazydocker
 set +x
 
+printf "\n$magenta Installing $codeblock cTop! $noformat\n"
+set -x
+sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop
+sudo chmod +x /usr/local/bin/ctop
+set +x
+
 printf "\n$magenta Installing extra kernel modules!$noformat \n"
 curl --silent --show-error https://raw.githubusercontent.com/sharpsounds/shrp-scripts/main/update-kernel-modules.sh | bash
 
