@@ -25,6 +25,7 @@ kernver="$(uname -r)"
 printf "\n$yellow Current kernel version is $codeblock $kernver $noformat\n"
 sleep 0.5
 set -x
+# this adds the drivers for the chipset in the ZZH! zigbee dongle, as well as UTF-8 for emoji in the file system.
 nala install -y linux-modules-extra-$kernver
 set +x
 printf "\n$br_green Module install/upgrade is complete.\n$red You should now reboot! \n"
